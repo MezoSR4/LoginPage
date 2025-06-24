@@ -1,0 +1,95 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="Css/all.min.css" />
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Css/style.css" />
+
+    <title>Login</title>
+  </head>
+  <body class="bg-mainColor">
+    <nav id="Nav" class="navbar navbar-expand-lg navbar-light bg-transparent div-shadow d-none">
+      <div class="container">
+        <a class="navbar-brand text-white fs-3" href="#">Smart Login</a>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <button onclick="logout()" class="btn btn-outline-warning" type="submit">Logout</button>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="container d-flex flex-column justify-content-center align-items-center vh-100"
+    >
+      <!-- ====================== Sign IN =========================-->
+      <div id="signIN" class="w-75 m-auto bg-mainColor p-5 div-shadow">
+        <h1 class="header-color text-info text-center">Smart Login System</h1>
+        <input
+          id="signinEmail"
+          class="form-control mb-4 mt-5"
+          type="email"
+          placeholder="Enter Your Email"
+        />
+        <input
+          id="signinPassword"
+          class="form-control my-4"
+          type="password"
+          placeholder="Enter Your Password"
+        />
+        <p id="message" class="text-center"></p>
+        <button id="loginBtn" onclick="login()" class="btn btn-outline-info w-100">Login</button>
+        <p class="text-white text-center mt-4">
+          Don't have an account?
+          <a href="#" onclick="goSignUp()">Sign Up</a>
+        </p>
+      </div>
+      <!-- ====================== Sign IN =========================-->
+
+      <!-- ============================================================================-->
+
+      <!-- ====================== Sign Up =========================-->
+      <div id="signUp" class="w-75 m-auto bg-mainColor p-5 div-shadow d-none">
+        <h1 class="header-color text-info text-center">Smart Login System</h1>
+        <input
+          id="signUpName"
+          class="form-control mb-4 mt-5"
+          type="text"
+          placeholder="Enter Your Name"
+        />
+        <input
+          id="signUpEmail"
+          class="form-control mb-4"
+          type="email"
+          placeholder="Enter Your Email"
+        />
+        <input
+          id="signUpPassword"
+          class="form-control my-4"
+          type="password"
+          placeholder="Enter Your Password"
+        />
+        <p id="signUpMessage" class="text-center"></p>
+
+        <button onclick="signUp()" class="btn btn-outline-info w-100 mt-3">Sign Up</button>
+        <p class="text-white text-center mt-4">
+          Already have an account?
+          <a href="#" onclick="goSignin()">Sign In</a>
+        </p>
+      </div>
+      <!-- ====================== Sign Up =========================-->
+
+      <!-- ============================================================================-->
+
+      <div id="home"  class="w-75 m-auto bg-mainColor p-5 div-shadow d-none">
+        <h1 id="username" class="header-color text-info text-center"></h1>
+      </div>
+    </div>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="Js/Main.js"></script>
+  </body>
+</html>
