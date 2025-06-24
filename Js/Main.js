@@ -86,6 +86,7 @@ function signUp() {
             signUpArray.push(signUpData)
             localStorage.setItem('users', JSON.stringify(signUpArray))
             document.getElementById('signUpMessage').innerHTML = '<span class="text-success m-3">Success</span>'
+            goSignin()
             return true
         }
         if (isEmailExist() == true) {
@@ -94,7 +95,7 @@ function signUp() {
             signUpArray.push(signUpData)
             localStorage.setItem('users', JSON.stringify(signUpArray))
             document.getElementById('signUpMessage').innerHTML = '<span class="text-success m-3">Success</span>'
-    
+            goSignin()
         }
     }
     else
